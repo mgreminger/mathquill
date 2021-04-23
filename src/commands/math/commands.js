@@ -246,7 +246,7 @@ var SupSub = P(MathCommand, function(_, super_) {
   _.latex = function() {
     function latex(prefix, block) {
       var l = block && block.latex();
-      return block ? prefix + (l.length === 1 ? l : '{' + (l || ' ') + '}') : '';
+      return block ? prefix + ('{' + (l || ' ') + '}') : '';
     }
     return latex('_', this.sub) + latex('^', this.sup);
   };
