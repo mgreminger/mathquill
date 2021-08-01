@@ -381,7 +381,7 @@ var SummationNotation = P(MathCommand, function(_, super_) {
   };
   _.latex = function() {
     function simplify(latex) {
-      return latex.length === 1 ? latex : '{' + (latex || ' ') + '}';
+      return '{' + (latex || ' ') + '}';
     }
     return this.ctrlSeq + '_' + simplify(this.ends[L].latex()) +
       '^' + simplify(this.ends[R].latex());
